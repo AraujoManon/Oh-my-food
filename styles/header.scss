@@ -1,0 +1,91 @@
+// header + partie h1 "Réservez le menu..." ...
+
+@mixin write {
+  font-family: "Roboto", sans-serif;
+  color: var(--Grey, #353535);
+}
+
+@mixin title {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+}
+
+body {
+  margin: 0%;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+header > img {
+  width: 197px;
+  height: 36px;
+  padding: 14px 108px 10px 105px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.localisation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(234, 234, 234, 1);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  &.fa-solid {
+    width: 12px;
+    height: 16px;
+    @include write;
+  }
+
+  & p {
+    font-size: 16px;
+    font-weight: 500;
+    @include write;
+  }
+}
+
+.intro {
+  background: var(--Background, #f6f6f6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & h1 {
+    display: flex;
+    width: 275px;
+    text-align: center;
+    margin: 0;
+    padding-top: 39px;
+    font-size: 24px;
+    @include title;
+  }
+
+  & p {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 27px;
+    @include write;
+  }
+  & button {
+    background: var(
+      --Button-Gradient,
+      linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%)
+    );
+    color: white;
+    border-radius: 25px;
+    height: 50px;
+    width: 218px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Roboto;
+    margin-bottom: 57px;
+  }
+}
